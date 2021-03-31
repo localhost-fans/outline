@@ -197,6 +197,8 @@ if (SLACK_CLIENT_ID) {
 
     ctx.redirect("/settings/integrations/slack");
   });
+} else {
+  console.warn('slack auth is not enabled')
 }
 
 export default router;

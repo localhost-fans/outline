@@ -95,6 +95,9 @@ if (GOOGLE_CLIENT_ID) {
     auth({ required: false }),
     passportMiddleware(providerName)
   );
+} else {
+  console.warn('google auth is not enabled')
 }
+
 
 export default router;
