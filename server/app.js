@@ -195,9 +195,9 @@ app.use(mount(routes));
 /**
  * Production updates and anonymous analytics.
  *
- * Set ENABLE_UPDATES=false to disable them for your installation
+ * Set ENABLE_UPDATES=true to enable them for your installation
  */
-if (process.env.ENABLE_UPDATES !== "false" && isProduction) {
+if (process.env.ENABLE_UPDATES == "true" && isProduction) {
   updates();
   setInterval(updates, 24 * 3600 * 1000);
 }

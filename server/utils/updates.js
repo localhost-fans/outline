@@ -11,6 +11,8 @@ const UPDATES_URL = "https://updates.getoutline.com";
 const UPDATES_KEY = "UPDATES_KEY";
 
 export default async () => {
+  console.log('telemetry enabled')
+
   invariant(
     process.env.SECRET_KEY && process.env.URL,
     "SECRET_KEY or URL env var is not set"
