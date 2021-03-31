@@ -15,13 +15,5 @@ export const Op = Sequelize.Op;
 export const sequelize = new Sequelize(process.env.DATABASE_URL, {
   logging: debug("sql"),
   typeValidation: true,
-  dialectOptions: {
-    ssl:
-      isProduction && !isSSLDisabled
-        ? {
-            // Ref.: https://github.com/brianc/node-postgres/issues/2009
-            rejectUnauthorized: false,
-          }
-        : false,
-  },
+  dialectOptions: {},
 });
